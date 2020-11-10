@@ -15,36 +15,20 @@ fn main() {
     // be the file we want to write the disemvoweled text to.
     let args: Vec<String> = env::args().collect();
     match args.len() {
-        0 | 1 => panic!("Not enough arguments; exactly 2 arguments needed"),
-        2 => {
-            let input_path = Path::new(&args[0]);
+        0 | 1 | 2 => panic!("Not enough arguments; exactly 2 arguments needed"),
+        3 => {
+            let input_path = Path::new(&args[1]);
             let s = String::from(read_file(&input_path));
 
             let s_disemvowel = disemvowel(&s);
         
             // Use command-line arguments for the name of the file,
             // and s_disemvowel for the text to write out.
-            write_file(Path::new(&args[1]), &s_disemvowel);
+            write_file(Path::new(&args[2]), &s_disemvowel);
         },
         _ => panic!("Too many arguments; exactly 2 arguments needed")
     }
 
-    //TODO: Panic if not enough arguments are provided
-    //Panic should output the string "Not enough arguments"
-
-    //TODO: 
-    //  * Pass an argument to read_file to read the original text
-    //  * Pass that to disemvowel to remove the vowels
-    //  * Write the disemvoweled text using write_file
-
-    // Replace String::from("test") with what you get from read_file
-    //let s = String::from("dummy text");
-
-    //let s_disemvowel = disemvowel(&s);
-
-    // Use command-line arguments for the name of the file,
-    // and s_disemvowel for the text to write out.
-    //write_file(Path::new("dummy.txt"), "output string");
 }
 
 fn read_file(path: &Path) -> String {
@@ -54,7 +38,6 @@ fn write_file(path: &Path, s: &str) {
     fs::write(path, s).expect("Unable to write file");
 }
 
-//TODO: Return the input string without vowels.
 fn disemvowel(s: &str) -> String {
     let mut input_chars = s.chars().peekable();
     let mut output = String::new();
