@@ -1,0 +1,12 @@
+[package]
+name = "disemvowel-in-rust"
+version = "1.0.0"
+authors = ["Nic McPhee <mcphee@morris.umn.edu>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tempfile = "3.1.0"
+assert_cmd = "0.10"
+predicates = "1"

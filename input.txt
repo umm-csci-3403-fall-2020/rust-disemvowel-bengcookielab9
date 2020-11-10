@@ -1,0 +1,10 @@
+This will have no vowels. Even capital vowels.
+
+pqrst
+aeiouAEIOUOIEAuoiea
+Morris, Minnesota
+An (Unexplained) Elephant!
+Some hieroglyphs: 𒐁	𒐌	𒐥	𒑳
+Some Linear B: 	𐂀	𐂚	𐃃	𐃺
+A little Phoenician: 𐤀	𐤈	𐤔	𐤕
+We can handle emoji as well! 🤣😃👍
